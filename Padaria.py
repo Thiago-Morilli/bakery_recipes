@@ -1,5 +1,5 @@
 import os
-import test
+# Fazer outra class com outras receitas
 
 class Receitas:
 
@@ -71,6 +71,7 @@ class Receitas:
         
     def Croissant(self):
         usuario = int(input("Qual é a quantidade de massa: "))
+        print()
 
         produto = usuario
       
