@@ -22,18 +22,20 @@ class Receitas:
 
 
     def opcao_invalida(self):
-        self.texto("\n Opcao invalida!")
+        print("\n Opcao invalida!")
         self.Voltar_menu()
 
 
-    def texto(self,texto):
-        linha = '*' * (len(texto))
-        print(texto)
-        
+    def texto(self):
+        linha = '*' * (90)  
+        print(linha)
+      
+       
        
     def Pao_normal(self):
-        
-        usuario = float(input("\nQual é a quantidade de massa: "))
+        self.texto()
+        usuario = float(input("Qual é a quantidade de massa: "))
+        self.texto()
 
         farinha = usuario          
 
@@ -44,15 +46,17 @@ class Receitas:
         produto = farinha * 1.1 / 1000
         agua = farinha * 0.750 / 1.000
 
-        self.texto(f"\nPara {farinha:.0f}kg de farinha vai: ")
-        self.texto(f"{farinha_centeio}kg de farinha de centeio")
-        self.texto(f"{sal}kg de sal")
-        self.texto(f"{produto}kg  de produto")
-        self.texto(f"{agua}ml de agua")
+        print(f"\nPara {farinha:.0f}kg de farinha vai: ")
+        print(f"{farinha_centeio}kg de farinha de centeio")
+        print(f"{sal}kg de sal")
+        print(f"{produto}kg  de produto")
+        print(f"{fermento}kg de fermento")
+        print (f"{agua}l de agua")
 
         while True:
-            usuario_02 = str(input("\nVoce quer saber para que essa massa serve? [S/N] "))
-            print()
+            self.texto()
+            usuario_02 = str(input("Voce quer saber para que essa massa serve? [S/N] ")).upper()
+            self.texto()
 
             if usuario_02 == "S":
                 print("Serve para: ",
@@ -70,21 +74,25 @@ class Receitas:
             
         
     def Croissant(self):
+        self.texto()
         usuario = int(input("Qual é a quantidade de massa: "))
-        print()
+        self.texto()
+        
 
         produto = usuario
       
         agua = produto * 0.450 / 1.000
         fermento = produto * 80 / 1.000
  
-        self.texto(f"Para {produto:.0f}kg de produto vai: ")
-        self.texto(f"{agua:.3f}ml de agua")
-        self.texto(f"{fermento:.0f}kg de fermento")
+        print(f"Para {produto:.0f}kg de produto vai: ")
+        print(f"{agua:.3f}l de agua")
+        print(f"{fermento:.0f}kg de fermento")
         print("Lembre-se de fazer 30 croissant pro dia aseguir")
 
         while True:
-            usuario_02 = str(input("Voce quer saber para que essa massa serve? [S/N] "))
+            self.texto()
+            usuario_02 = str(input("Voce quer saber para que essa massa serve? [S/N] ")).upper()
+            self.texto()
 
             if usuario_02 == "S":
                 print({"Lancheiras": ["Fiambre E Queijo (Quantidade: 3)",
@@ -96,13 +104,14 @@ class Receitas:
             elif usuario_02 == "N":
                 print("Obrigado") 
                 self.Voltar_menu()
-        print()
+      
 
 
     def massa_bolas(self):
+        self.texto()
         usuario = float(input("\nQual é a quantidade de massa: "))
-        print()
-
+        self.texto()
+        
         farinha = usuario
 
         sal = farinha * 20 /  1.000
@@ -113,19 +122,20 @@ class Receitas:
         agua = "olho"
         produto_amarelo = "Um pouco"
  
-        self.texto(f"Para {farinha:.0f}kg de farinha vai: ")
-        self.texto(f"{produto:.0f}kg de produto")
-        self.texto(f"{sal}kg de sal")
-        self.texto(f"{ovos:.0f} ovos")
-        self.texto(f"{fermento}kg de fermento")
-        self.texto(f"Agua: {agua}")
-        self.texto(f"{azeite}ml de azeite")
-        self.texto(f"Produto Amarelo: {produto_amarelo}")
+        print(f"Para {farinha:.0f}kg de farinha vai: ")
+        print(f"{produto:.0f}kg de produto")
+        print(f"{sal}kg de sal")
+        print(f"{ovos:.0f} ovos")
+        print(f"{fermento}kg de fermento")
+        print(f"Agua: {agua}")
+        print(f"{azeite}ml de azeite")
+        print(f"Produto Amarelo: {produto_amarelo}")
         print("Pesar bolas com: 300kg")
 
         while True:
+            self.texto()
             usuario_02 = str(input("\nVoce quer saber para que essa massa serve? [S/N] "))
-            print()
+            self.texto()
        
             if usuario_02 == "S":
                 print({"Serve para": ["Bolas de carne",
@@ -142,8 +152,9 @@ class Receitas:
 
 
     def pao_de_cachorro(self):
-
+        self.texto()
         usuario = int(input("\nQual é a quantidade de massa: "))
+        self.texto()
 
         farinha = usuario
         leite = farinha * 500 / 1.000
@@ -153,19 +164,21 @@ class Receitas:
         sal = farinha * 25 / 1.000
         ovos = farinha * 2 / 1.000
 
-        self.texto(f"\nPara {farinha}kg de farinha")
-        self.texto(f"{produto}kg de produto")
-        self.texto(f"{acucar}kg de acucar")
-        self.texto(f"{sal}kg de sal")
-        self.texto(f"{fermento}kg de fermento")
-        self.texto(f"{ovos} ovos")
-        self.texto(f"{leite}l de leite")
+        print(f"\nPara {farinha}kg de farinha")
+        print(f"{produto}kg de produto")
+        print(f"{acucar}kg de acucar")
+        print(f"{sal}kg de sal")
+        print(f"{fermento}kg de fermento")
+        print(f"{ovos} ovos")
+        print(f"{leite}l de leite")
 
         print("\nPintar com ovos e colocar sementes.")
 
 
     def biscoitos(self):
+        self.texto()
         usuario = int(input("\nQual é a quantidade de massa: "))
+        self.texto()
 
         farinha = usuario
         acucar = farinha * 500 / 1.000
@@ -174,13 +187,13 @@ class Receitas:
         bicarbonato = farinha * 2 / 1.000
                                                    
 
-        self.texto(f"\n{farinha}kg farinha vai :")
-        self.texto(f"{acucar}kg de acucar")
-        self.texto(f"{ovos} ovos")
-        self.texto(f"{fermento_po} colheres de fermento em po")
-        self.texto(f"{bicarbonato} colheres de bicarconato")
-        self.texto("Um pouco de azeite")
-        self.texto("Um pouco de leite")
+        print(f"{farinha}kg farinha vai :")
+        print(f"{acucar}kg de acucar")
+        print(f"{ovos} ovos")
+        print(f"{fermento_po} colheres de fermento em po")
+        print(f"{bicarbonato} colheres de bicarconato")
+        print("Um pouco de azeite")
+        print("Um pouco de leite")
 
 
     def escolher_opcao(self):
